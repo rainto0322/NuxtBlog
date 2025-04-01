@@ -1,0 +1,52 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
+*::selection{
+  background-color: var(--link);
+  color: var(--major);
+}
+:root {
+
+  --major: #fff;
+  --minor: #111;
+  --font: #2d2d2d;
+  --gray: #999;
+  --link: #2c63bc;
+  --theme: #f0a6a6;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --major: #111;
+    --minor: #2b2b2b;
+    --font: #f5f0e5;
+    --gray: #999;
+    --link: #6ab6e5;
+    --theme: #f0a6a6;
+  }
+}
+
+html {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue';
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1.5em;
+  background-color: var(--major);
+  color: var(--font);
+  min-width: 300px;
+}
+
+img {
+  max-width: 100%;
+  border-radius: 1em;
+}
+
+a {
+  color: var(--font);
+  text-decoration: none;
+}
+
