@@ -26,9 +26,9 @@ export function useCue() {
       cues.value = [...cues.value, cue].slice(-maxCues)
     }
 
-    // setTimeout(() => {
-    //   remove(id)
-    // }, 2000);
+    setTimeout(() => {
+      remove(id)
+    }, 2000);
     running.value = false
   }
 
@@ -43,7 +43,7 @@ export function useCue() {
     await processQueue(body.id)
     return body
   }
-  
+
   function done(cue: Partial<Cue>) {
     add({ type: 'done', icon: '/img/success.svg', ...cue })
   }
@@ -64,9 +64,7 @@ export function useCue() {
       }
     }
 
-    setTimeout(() => {
-      cues.value = cues.value.filter((t: Cue) => t.id !== id)
-    }, 200)
+    cues.value = cues.value.filter((t: Cue) => t.id !== id)
   }
 
   function clear() {

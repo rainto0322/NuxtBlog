@@ -5,8 +5,6 @@ export default defineEventHandler(async (event) => {
   try {
     const { name, password, email } = await readBody(event)
     const empty = await User.findOne({ group: "admin" })
-    console.log(empty);
-    
     const user = {
       name,
       password: bcrypt.hashSync(password, 8),
@@ -23,7 +21,6 @@ export default defineEventHandler(async (event) => {
         user: data
       }
     }
-
   } catch (error) {
     return new Response(error as string, { status: 409 })
   }

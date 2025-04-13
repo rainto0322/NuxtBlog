@@ -5,10 +5,11 @@
   -webkit-tap-highlight-color: transparent;
 }
 
-*::selection{
+*::selection {
   background-color: var(--link);
   color: var(--major);
 }
+
 :root {
 
   --major: #fff;
@@ -25,7 +26,7 @@
     --minor: #2b2b2b;
     --font: #f5f0e5;
     --gray: #999;
-    --link: #6ab6e5;
+    --link: #3b9bd6;
     --theme: #f0a6a6;
   }
 }
@@ -40,6 +41,10 @@ html {
   min-width: 300px;
 }
 
+body{
+  margin: 20px;
+}
+
 img {
   max-width: 100%;
   border-radius: 1em;
@@ -50,3 +55,41 @@ a {
   text-decoration: none;
 }
 
+input,
+textarea{
+  background-color: var(--major);
+  color: var(--font);
+  border: 1px solid var(--theme);
+  outline: none;
+  width: 100%;
+  margin-block: .5em;
+  padding: 10px;
+  border-radius: 1em;
+}
+
+button{
+  background-color: var(--theme);
+  color: var(--major);
+  border: none;
+  outline: none;
+  padding: 1em .5em;
+  border-radius: 10px;
+  cursor: pointer;
+}
+button.submit{
+  width: 100%;
+}
+
+@keyframes show {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.show {
+  animation: show .5s;
+}

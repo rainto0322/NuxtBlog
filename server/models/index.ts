@@ -8,7 +8,7 @@ const options = {
 
 // User Model
 const User = defineMongooseModel('user', {
-  name: { type: String, unique: true, trim: true },
+  name: { type: String, unique: true, trim: true, required: true },
   password: { type: String, trim: true },
   group: { type: String, default: ["tourist", "owner"] },
   email: { type: String, unique: true }

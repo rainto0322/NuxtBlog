@@ -1,7 +1,4 @@
 <script setup lang="ts">
-useSeoMeta({
-  ogImage: '/favicon.png'
-})
 </script>
 
 <template>
