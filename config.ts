@@ -13,5 +13,6 @@ export const TokenName = "rain_token"
 export const CookieSetting = {
   maxAge: 604800, // 7 days
   sameSite: 'lax' as 'lax',
-  secure: true,
+  httpOnly: false,
+  // secure: true,
 }

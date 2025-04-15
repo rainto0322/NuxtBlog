@@ -1,6 +1,9 @@
 <script setup lang="ts">
 useHead({
   title: 'Login',
+  link: [
+    { rel: 'icon', href: '/favicon.svg' }
+  ]
 })
 
 </script>

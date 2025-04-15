@@ -1,0 +1,39 @@
+
+.menu {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  background-color: rgba(100, 100, 100, .1);
+  backdrop-filter: blur(10px);
+  overflow: hidden;
+  z-index: 10;
+}
+
+.link {
+  user-select: none;
+  cursor: pointer;
+  display: inline-block;
+  padding: .5em;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  transition: all .2s ease;
+  color: var(--theme);
+}
+
+.link.active,
+.link:hover {
+  background-color: var(--theme);
+  color: var(--major);
+}
+
+.icon,
+.title {
+  vertical-align: middle;
+}
+
+.title{
+  padding-inline: 8px;
+}

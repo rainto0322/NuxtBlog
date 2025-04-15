@@ -12,3 +12,9 @@ export function defineMongooseModel<T>(
   if (hooks) hooks(newSchema)
   return mongoose.model<T>(name, newSchema)
 }
+
+export const options = {
+  versionKey: false,
+  virtuals: false,
+  timestamps: false
+}

@@ -38,11 +38,11 @@ html {
   line-height: 1.5em;
   background-color: var(--major);
   color: var(--font);
-  min-width: 300px;
+  min-width: 280px;
 }
 
 body{
-  margin: 20px;
+  margin: 8px;
 }
 
 img {

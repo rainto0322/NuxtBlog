@@ -2,10 +2,11 @@ import bcrypt from "bcrypt";
 import { User } from "@/server/models";
 import { ConvertToken, VerifyToken } from "@/utils/auth";
 import { TokenName, CookieSetting } from "@/config";
+
+// /api/user/login
 export default defineEventHandler(async (event) => {
   try {
-    const maxAge = 604800
-    const token = getCookie(event, 'rain_token')
+    const token = getCookie(event, TokenName)
 
     // Token login
     if (token) {

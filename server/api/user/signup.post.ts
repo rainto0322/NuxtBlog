@@ -1,6 +1,7 @@
 import { User } from "@/server/models";
 import bcrypt from "bcrypt";
 
+// /api/user/signup
 export default defineEventHandler(async (event) => {
   try {
     const { name, password, email } = await readBody(event)

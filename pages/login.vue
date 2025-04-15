@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { TokenName } from "@/config";
 const cue = useCue()
 const router = useRouter()
 
@@ -28,6 +29,7 @@ async function login() {
     const { ok, msg } = data
     if (ok) {
       cue.done({ title: msg })
+      console.log(data);
       setTimeout(() => {
         router.push('/admin')
       }, 1000);
@@ -87,9 +89,8 @@ const isFormValid = computed(() => {
 
 onMounted(() => {
   Init()
-  const token = useCookie('rain_token').value
-  console.log(token);
-  
+  // auto login
+  const token = useCookie(TokenName).value
   if (token) login()
 })
 
